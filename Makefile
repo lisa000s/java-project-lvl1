@@ -19,7 +19,7 @@ test:
 	./gradlew test
 
 lint:
-	./gradlew checkstyleMain checkstyleTest
+	./gradlew checkstyleMain
 
 update-deps:
 	./gradlew useLatestVersions
