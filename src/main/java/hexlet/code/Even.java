@@ -14,7 +14,7 @@ public class Even {
         while (rounds < MAX_ROUNDS) {
             Random rand = new Random();
             int upperbound = Integer.BYTES;
-            int randomNumber = rand.nextInt(upperbound);
+            int randomNumber = rand.nextInt(upperbound)+1;
             System.out.println("Answer 'yes' if number even otherwise answer 'no'.\n" + "Question: " + randomNumber);
             Scanner s = new Scanner(System.in);
             System.out.print("Answer: ");
