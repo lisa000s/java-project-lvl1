@@ -20,7 +20,7 @@ public class App {
                 break;
             case 2:
                 Cli.greeting();
-                Even.isEven();
+                Game.isEven();
                 break;
             default:
                 break;
