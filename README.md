@@ -5,4 +5,4 @@
 
 ### Even Number Game
 
-<a href="https://asciinema.org/a/v6Yx9xkUosDqWJvS6ZDzYX2JJ" target="_blank"><img src="https://asciinema.org/a/v6Yx9xkUosDqWJvS6ZDzYX2JJ.svg" /></a>
+<a href="https://asciinema.org/a/Q7kYlkB7YUVv1OYpeI6WEXVRu" target="_blank"><img src="https://asciinema.org/a/Q7kYlkB7YUVv1OYpeI6WEXVRu.svg" /></a>
