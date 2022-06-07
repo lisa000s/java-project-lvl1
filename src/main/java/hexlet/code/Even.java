@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 import java.util.Random;
 
-public class Game {
+public class Even {
     public static final int MAX_ROUNDS = 3;
     public static final int NUM_OF_ROUNDS_BEFORE_MAX = 2;
     public static final int WINS = 3;
