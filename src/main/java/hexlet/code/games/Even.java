@@ -13,6 +13,14 @@ public class Even {
         return userInput % 2 == 0;
     }
 
+    private static String correctAnswer(boolean isEven) {
+        if (isEven) {
+            return "yes";
+        } else {
+            return "no";
+        }
+    }
+
     public static void evenGame() {
         System.out.print(Engine.getGreeting());
         Scanner s = new Scanner(System.in);
@@ -28,22 +36,12 @@ public class Even {
             s = new Scanner(System.in);
             String answer = s.nextLine().toLowerCase();
 
-            if (isEven(randomNumber)) {
-                if (answer.equals("yes")) {
-                    System.out.println(Engine.getCorrectMessage());
-                } else {
-                    System.out.println("'" + answer + "'" + Engine.getWrongAnswerMessage() + "'yes'.");
-                    System.out.println(Engine.getTryAgainMessage() + username + "! ");
-                    break;
-                }
+            if ((isEven(randomNumber) && answer.equals("yes")) || (!isEven(randomNumber) && answer.equals("no"))) {
+                System.out.println(Engine.getCorrectMessage());
             } else {
-                if (answer.equals("no")) {
-                    System.out.println(Engine.getCorrectMessage());
-                } else {
-                    System.out.println("'" + answer + "'" + Engine.getWrongAnswerMessage() + "'no'.");
-                    System.out.println(Engine.getTryAgainMessage() + username + "! ");
-                    break;
-                }
+                System.out.println("'" + answer + "'" + Engine.getWrongAnswerMessage() + "'" + correctAnswer(isEven(randomNumber)) + "'.");
+                System.out.println(Engine.getTryAgainMessage() + username + "! ");
+                break;
             }
             rounds++;
         }
