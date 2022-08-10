@@ -1,28 +1,29 @@
 package hexlet.code;
 
+import java.util.Scanner;
+
 public class Engine {
     public static final int MAX_ROUNDS = 3;
     public static final int RANDOM_UPPERBOUND = 20;
-
-    static String greeting = "Welcome to the Brain Games!\nMay I have your name? ";
-
-    static String wrongAnswerMessage = " is a wrong answer ;(. Correct answer was ";
-    static String tryAgainMessage = "Let's try again, ";
-    static String correctMessage = "Correct!";
-
-    public static String getGreeting() {
-        return greeting;
-    }
-
-    public static String getWrongAnswerMessage() {
-        return wrongAnswerMessage;
-    }
-
-    public static String getTryAgainMessage() {
-        return tryAgainMessage;
-    }
-
-    public static String getCorrectMessage() {
-        return correctMessage;
+    public static void start(String prompt, String[][] qa) {
+        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
+        Scanner sUsername = new Scanner(System.in);
+        String username = sUsername.next();
+        System.out.println("\nHello, " + username + "!\n");
+        System.out.println(prompt + "\n");
+        for (int i = 0; i < MAX_ROUNDS; i++) {
+            System.out.println("Question: " + qa[i][0]);
+            Scanner sAnswer = new Scanner(System.in);
+            String userAnswer = sAnswer.nextLine().toLowerCase();
+            if (!qa[i][1].equals(userAnswer)) {
+                System.out.println(
+                        "\n" + "'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was" + " '"
+                                + qa[i][1] + "'." + "\nLet's try again, " + username + "!");
+                return;
+            }
+            System.out.println("Correct!\n");
+        }
+        System.out.println("Congratulations, " + username + "!");
+        sUsername.close();
     }
 }
