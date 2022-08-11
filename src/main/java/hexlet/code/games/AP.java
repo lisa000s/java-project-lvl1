@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Arrays;
-
 import static hexlet.code.Engine.*;
 
 public class AP {
@@ -31,7 +29,12 @@ public class AP {
                     ap[k] = "..";
                 }
             }
-            qa[i][0] = Arrays.toString(ap);
+            StringBuilder strbuffer = new StringBuilder();
+            for (String str: ap) {
+                strbuffer.append(str).append(" ");
+            }
+            String question = strbuffer.toString();
+            qa[i][0] = question;
             qa[i][1] = skippedNum;
         }
         Engine.start(PROMPT, qa);
