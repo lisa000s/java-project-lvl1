@@ -10,13 +10,13 @@ public class Even {
     public static void start() {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            int num = Utils.generateRandomNum(0,RANDOM_UPPERBOUND);
+            int num = Utils.generateRandomNum(0, RANDOM_UPPERBOUND);
             qa[i][0] = String.valueOf(num);
             qa[i][1] = isEven(num) ? "yes" : "no";
         }
         Engine.start(PROMPT, qa);
     }
-    public static boolean isEven (int num) {
-        return num % 2 == 0 ;
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
     }
 }

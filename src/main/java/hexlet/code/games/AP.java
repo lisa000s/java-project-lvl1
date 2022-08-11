@@ -3,7 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.COMMON_DIFF_AP;
+import static hexlet.code.Engine.MAX_AP_LENGTH;
+import static hexlet.code.Engine.MAX_ROUNDS;
+import static hexlet.code.Engine.MIN_AP_LENGTH;
+import static hexlet.code.Engine.RANDOM_UPPERBOUND;
+
 
 public class AP {
     private static final String PROMPT = "What number is missing in the progression?";
@@ -12,14 +17,14 @@ public class AP {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
             int startingNum = Utils.generateRandomNum(0, RANDOM_UPPERBOUND);
-            int commonDiff = Utils.generateRandomNum(1, 3);
+            int commonDiff = Utils.generateRandomNum(1, COMMON_DIFF_AP);
             int nthTerm = Utils.generateRandomNum(MIN_AP_LENGTH, MAX_AP_LENGTH);
-            int curr_term;
+            int currTerm;
             String[] ap = new String[nthTerm + 1];
-            curr_term = startingNum;
+            currTerm = startingNum;
             for (int j = 0; j <= nthTerm; j++) {
-                ap[j] = String.valueOf(curr_term);
-                curr_term = curr_term + commonDiff;
+                ap[j] = String.valueOf(currTerm);
+                currTerm = currTerm + commonDiff;
             }
             int skippedNumIndex = Utils.generateRandomNum(0, ap.length - 1);
             String skippedNum = "";

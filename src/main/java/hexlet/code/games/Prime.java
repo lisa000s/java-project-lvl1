@@ -10,7 +10,7 @@ public class Prime {
     public static void start() {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            int num = Utils.generateRandomNum(1,RANDOM_UPPERBOUND);
+            int num = Utils.generateRandomNum(1, RANDOM_UPPERBOUND);
             qa[i][0] = String.valueOf(num);
             qa[i][1] = isPrime(num) ? "no" : "yes";
         }
