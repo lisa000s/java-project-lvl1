@@ -6,6 +6,8 @@ public class Engine {
     public static final int MAX_ROUNDS = 3;
     public static final int RANDOM_UPPERBOUND = 20;
     public static final int RANDOM_OPERATOR_INDEX = 2;
+    public static final int MIN_AP_LENGTH = 5;
+    public static final int MAX_AP_LENGTH = 10;
     public static void start(String prompt, String[][] qa) {
         System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         Scanner scanner = new Scanner(System.in);

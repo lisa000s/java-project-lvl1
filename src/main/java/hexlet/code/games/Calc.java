@@ -12,9 +12,9 @@ public class Calc {
     public static void start() {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            int num1 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
-            int num2 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
-            int operatorIndex = Utils.generateRandomNum(RANDOM_OPERATOR_INDEX);
+            int num1 = Utils.generateRandomNum(0,RANDOM_UPPERBOUND);
+            int num2 = Utils.generateRandomNum(0,RANDOM_UPPERBOUND);
+            int operatorIndex = Utils.generateRandomNum(0,RANDOM_OPERATOR_INDEX);
             qa[i][0] = num1 + " " + OPERATORS[operatorIndex] + " " + num2;
             qa[i][1] = String.valueOf(calculate(num1,num2,operatorIndex));
         }

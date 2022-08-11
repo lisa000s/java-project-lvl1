@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
-
 import static hexlet.code.Engine.MAX_ROUNDS;
 import static hexlet.code.Engine.RANDOM_UPPERBOUND;
 
@@ -14,9 +12,8 @@ public class GCD {
     public static void start() {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            Random rand = new Random();
-            int num1 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
-            int num2 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
+            int num1 = Utils.generateRandomNum(0,RANDOM_UPPERBOUND);
+            int num2 = Utils.generateRandomNum(0,RANDOM_UPPERBOUND);
             qa[i][0] = num1 + " " + num2;
             int gcd = 1;
 
