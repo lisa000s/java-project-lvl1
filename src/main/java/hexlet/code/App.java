@@ -36,9 +36,7 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
-                5 - AP
-                6 - Prime
-                0 - Exit
+                
                 Your choice:\s""");
     }
 }
