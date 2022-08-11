@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 
@@ -14,8 +15,8 @@ public class GCD {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
             Random rand = new Random();
-            int num1 = rand.nextInt(RANDOM_UPPERBOUND) + 1;
-            int num2 = rand.nextInt(RANDOM_UPPERBOUND) + 1;
+            int num1 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
+            int num2 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
             qa[i][0] = num1 + " " + num2;
             int gcd = 1;
 

@@ -1,8 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.AP;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -23,8 +25,8 @@ public class App {
             case EVEN -> Even.start();
             case CALC -> Calc.start();
             case GCDIV -> GCD.start();
-            //case APROG -> AP.start();
-            //case PRIME -> Prime.start();
+            case APROG -> AP.start();
+            case PRIME -> Prime.start();
             default -> System.out.println("Invalid choice");
         }
     }
@@ -36,7 +38,9 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
-                
+                5 - AP
+                6 - Prime
+                0 - Exit
                 Your choice:\s""");
     }
 }

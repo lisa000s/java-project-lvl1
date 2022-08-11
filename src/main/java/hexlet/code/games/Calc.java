@@ -1,39 +1,35 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
-import static hexlet.code.Engine.MAX_ROUNDS;
-import static hexlet.code.Engine.RANDOM_UPPERBOUND;
+import hexlet.code.Utils;
+
+import static hexlet.code.Engine.*;
 
 public class Calc {
     private static final String PROMPT = "What is the result of the expression?";
+    private static final char[] OPERATORS = {'+', '-', '*'};
+
     public static void start() {
         String[][] qa = new String[MAX_ROUNDS][MAX_ROUNDS - 1];
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            Random rand = new Random();
-            int num1 = rand.nextInt(RANDOM_UPPERBOUND) + 1;
-            int num2 = rand.nextInt(RANDOM_UPPERBOUND) + 1;
-            char operator = '?';
-            int value = 0;
-            Random r = new Random();
-            switch (r.nextInt(MAX_ROUNDS)) {
-                case 0 -> {
-                    operator = '+';
-                    value = num1 + num2;
-                }
-                case 1 -> {
-                    operator = '-';
-                    value = num1 - num2;
-                }
-                case 2 -> {
-                    operator = '*';
-                    value = num1 * num2;
-                }
-                default -> System.out.println("Invalid operator");
-            }
-            qa[i][0] = num1 + " " + operator + " " + num2;
-            qa[i][1] = String.valueOf(value);
+            int num1 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
+            int num2 = Utils.generateRandomNum(RANDOM_UPPERBOUND);
+            int operatorIndex = Utils.generateRandomNum(RANDOM_OPERATOR_INDEX);
+            qa[i][0] = num1 + " " + OPERATORS[operatorIndex] + " " + num2;
+            qa[i][1] = String.valueOf(calculate(num1,num2,operatorIndex));
         }
         Engine.start(PROMPT, qa);
     }
+
+    public static int calculate(int num1, int num2, int operatorIndex) {
+        int value = 0;
+        switch (OPERATORS[operatorIndex]) {
+            case '+' -> value = num1 + num2;
+            case '-' -> value = num1 - num2;
+            case '*' -> value = num1 * num2;
+            default -> System.out.println("Invalid operator");
+        }
+        return value;
+    }
+
 }
