@@ -4,6 +4,12 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
 ### Even Number Game
-<a href="https://asciinema.org/a/pKvBCHG5Zj6eyI5pw8lm2I7K7" target="_blank"><img src="https://asciinema.org/a/pKvBCHG5Zj6eyI5pw8lm2I7K7.svg" /></a>
+<a href="https://asciinema.org/a/xc7Y8x2Zkc7nPQqBZNThLk4JJ" target="_blank"><img src="https://asciinema.org/a/xc7Y8x2Zkc7nPQqBZNThLk4JJ.svg" /></a>
 ### Calc Game
-<a href="https://asciinema.org/a/vSn1PW5R6bQlJttSt2HGrATVe" target="_blank"><img src="https://asciinema.org/a/vSn1PW5R6bQlJttSt2HGrATVe.svg" /></a>
+<a href="https://asciinema.org/a/Zfy9PKUIDXc1yZpKJCP02gSJV" target="_blank"><img src="https://asciinema.org/a/Zfy9PKUIDXc1yZpKJCP02gSJV.svg" /></a>
+### GCD Game
+<a href="https://asciinema.org/a/Lb7DDZXaGUFSxnnqlKwhbrSoe" target="_blank"><img src="https://asciinema.org/a/Lb7DDZXaGUFSxnnqlKwhbrSoe.svg" /></a>
+### Arithmetic Progression Game
+<a href="https://asciinema.org/a/wbVSPhCfWqWgWs3ImlslkU0NK" target="_blank"><img src="https://asciinema.org/a/wbVSPhCfWqWgWs3ImlslkU0NK.svg" /></a>
+### Prime Number Game
+<a href="https://asciinema.org/a/t6xpgyPE3JpjxOTe4ng79uz8z" target="_blank"><img src="https://asciinema.org/a/t6xpgyPE3JpjxOTe4ng79uz8z.svg" /></a>
