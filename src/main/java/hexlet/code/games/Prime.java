@@ -24,6 +24,6 @@ public class Prime {
                 break;
             }
         }
-        return flag;
+        return num < 2 || flag;
     }
 }

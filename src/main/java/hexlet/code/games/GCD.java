@@ -15,15 +15,17 @@ public class GCD {
             int num1 = Utils.generateRandomNum(1, RANDOM_UPPERBOUND);
             int num2 = Utils.generateRandomNum(1, RANDOM_UPPERBOUND);
             qa[i][0] = num1 + " " + num2;
-            int gcd = 1;
-
-            for (int j = 1; j <= num1 && j <= num2; j++) {
-                if (num1 % j == 0 && num2 % j == 0) {
-                    gcd = j;
-                }
-            }
-            qa[i][1] = String.valueOf(gcd);
+            qa[i][1] = String.valueOf(calculateGCD(num1, num2));
         }
         Engine.start(PROMPT, qa);
+    }
+    public static int calculateGCD(int num1, int num2) {
+        int gcd = 1;
+        for (int j = 1; j <= num1 && j <= num2; j++) {
+            if (num1 % j == 0 && num2 % j == 0) {
+                gcd = j;
+            }
+        }
+        return gcd;
     }
 }

@@ -19,34 +19,36 @@ public class AP {
             int startingNum = Utils.generateRandomNum(0, RANDOM_UPPERBOUND);
             int commonDiff = Utils.generateRandomNum(1, COMMON_DIFF_AP);
             int nthTerm = Utils.generateRandomNum(MIN_AP_LENGTH, MAX_AP_LENGTH);
-            String[] ap = generateRandomAP(startingNum, commonDiff, nthTerm);
-            int skippedNumIndex = Utils.generateRandomNum(0, ap.length - 1);
+            int[] ap = generateAP(startingNum, commonDiff, nthTerm);
+            String[] strArray = new String[ap.length];
+            for (int j = 0; j < ap.length; j++) {
+                strArray[j] = String.valueOf(ap[j]);
+            }
+            int skippedNumIndex = Utils.generateRandomNum(0, strArray.length - 1);
             String skippedNum = "";
-            for (int k = 0; k < ap.length; k++) {
+            StringBuilder finalStr = new StringBuilder();
+            for (int k = 0; k < strArray.length; k++) {
                 if (skippedNumIndex == k) {
-                    skippedNum = ap[k];
-                    ap[k] = "..";
+                    skippedNum = strArray[k];
+                    finalStr.append(".. ");
+                } else {
+                    finalStr.append(strArray[k]).append(" ");
                 }
             }
-            StringBuilder strbuffer = new StringBuilder();
-            for (String str: ap) {
-                strbuffer.append(str).append(" ");
-            }
-            String question = strbuffer.toString();
+            String question = finalStr.toString();
             qa[i][0] = question;
             qa[i][1] = skippedNum;
         }
         Engine.start(PROMPT, qa);
     }
-    public static String[] generateRandomAP(int startingNum, int commonDiff, int nthTerm) {
+    public static int[] generateAP(int startingNum, int commonDiff, int nthTerm) {
         int currTerm;
-        String[] ap = new String[nthTerm + 1];
+        int[] ap = new int[nthTerm + 1];
         currTerm = startingNum;
         for (int j = 0; j <= nthTerm; j++) {
-            ap[j] = String.valueOf(currTerm);
+            ap[j] = currTerm;
             currTerm = currTerm + commonDiff;
         }
         return ap;
     }
-
 }
